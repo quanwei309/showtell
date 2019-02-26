@@ -36,7 +36,7 @@ if __name__ == '__main__':
     for l in p:
         print(l.strip())
 
-    for parm in ["input_train_file_pattern", "inception_checkpoint_file", "train_dir", "train_inception", "number_of_steps",
+    for parm in ["input_train_file_pattern", "inception_checkpoint_file", "train_dir", "train_inception",
                  "input_val_file_pattern" , "checkpoint_dir", "eval_dir",
                  "checkpoint_path", "vocab_file", "input_files"]:
         try:
@@ -44,9 +44,12 @@ if __name__ == '__main__':
         except:
             pass
     #batch_size =32    40000step 大概一个epoch
+    number_of_steps = getattr(FLAGS, "number_of_steps")
     for i in range(2):
        # train 1 epoch
         print('################    train    ################')
+        number_of_steps = (i+1)*number_of_steps
+        cmd +=' --{0}={1}'.format("number_of_steps", number_of_steps)
         print('################    cmd :   ', cmd)
         p = os.popen('python ./train.py' + cmd)
         for l in p:
