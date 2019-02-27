@@ -44,9 +44,9 @@ if __name__ == '__main__':
         except:
             pass
     #batch_size =32    40000step 大概一个epoch
-    number_of_steps = getattr(FLAGS, "number_of_steps")
     for i in range(10):
-       # train 1 epoch
+        number_of_steps = getattr(FLAGS, "number_of_steps")
+        # train 1 epoch
         print('################    train    ################')
         number_of_steps = (i+1)*number_of_steps
         cmd +=' --{0}={1}'.format("number_of_steps", number_of_steps)
