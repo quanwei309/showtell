@@ -4,7 +4,7 @@ import os
 
 
 from flags import parse_args
-from unzipdata import unzip
+#from unzipdata import unzip
 
 
 if __name__ == '__main__':
