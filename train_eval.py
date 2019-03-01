@@ -9,7 +9,7 @@ from flags import parse_args
 
 if __name__ == '__main__':
     FLAGS, unparsed = parse_args()
-    #unzip()
+    unzip()
     print('current working dir [{0}]'.format(os.getcwd()))
     w_d = os.path.dirname(os.path.abspath(__file__))
     print('change wording dir to [{0}]'.format(w_d))
