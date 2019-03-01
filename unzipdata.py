@@ -17,8 +17,9 @@ def unzip():
         print(systty,"thisi is windows machine!!!")
     elif system2.lower() == 'linux':
         flag = "/"
-        source_zip="/data/helloworld309/showandtell-data/cocodata_test.zip"
-        target_dir="/output/cocodata_test/"
+        #source_zip="/data/helloworld309/showandtell-data/cocodata_test.zip"
+        source_zip="/data/SwordSing/mscoco/train.zip"
+        target_dir="/output/mscoco_traindata"
         print(systty,"thisi is linux machine!!!")
     else:
         print("not found....!")
