@@ -13,7 +13,7 @@ current_time = datetime.datetime.now(tz)
 def parse_args(check=True):
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--input_train_file_pattern', type=str, default='/data/helloworld309/showandtell-data/train-?????-of-00256',
+    parser.add_argument('--input_train_file_pattern', type=str, default='/output/mscoco_traindata/train-?????-of-00256',
                         help='input_train_file_pattern.')
 
     parser.add_argument('--inception_checkpoint_file', type=str, default='/data/helloworld309/showandtell-data/inception_v3.ckpt',
